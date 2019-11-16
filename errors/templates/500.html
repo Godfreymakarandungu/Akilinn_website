@@ -1,0 +1,77 @@
+{%load staticfiles%%}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Akilin-Intelligent,innovative solutions</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="{%static 'css/main.css'%}">
+
+
+</head>
+
+<body>
+{% include "header.html"%}
+   <!-- navigation 
+   ================================================== -->
+   
+
+	<!-- main content
+   ================================================== -->
+   <main id="main-404-content" class="main-content-slides">
+
+   	<div class="content-wrap">
+		   <div class="main-content">
+		   	<div class="row">
+		   		<div class="col-twelve">
+			  		{% for objects in error500 %}
+			  			<h1 class="kern-this"> Error 500.</h1>
+			  			<p>
+						{{objects.Content}}
+				
+			  			</p>	   			
+
+			   	</div> <!-- /twelve --> 		   			
+		   	</div> <!-- /row -->    		 		
+		   </div> <!-- /main-content --> 
+                    {%endfor %}
+		   <footer>
+		   	<div class="row">
+                    {%for objects in links %}
+		  			<div class="col-five tab-full bottom-links">
+			   		<ul class="links">
+				   		<li><a href="{{objects.Home}}">Homepage</a></li>
+				         <li><a href="{{objects.About}}">About</a></li>			                    
+				   	</ul>
+            <div class="footer_copyright">
+                <div class="container">
+                    <div class="float-sm-left">
+                        <h5>
+Copyright &copy;<script>document.write(new Date().getFullYear() );</script> All rights reserved | <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://wwwakilinn.co.ke" target="_blank">Akilinn</a>
+</h5>
+                    </div>
+                </div>
+            </div>
+				     		  		
+		   </footer>
+
+		</div> <!-- /content-wrap -->
+   
+   </main> <!-- /main-404-content -->
+
+</body>
+
+</html>

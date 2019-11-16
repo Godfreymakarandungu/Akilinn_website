@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%include "head.html"%}
+    <body>
+     
+        <!--================Header Menu Area =================-->
+  {%include "header.html"%}
+        <!--================End Header Menu Area =================-->
+        
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_text">
+                    <h2>Careers</h2>
+                    <p>Want to join Us ?</p>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Blog Main Area =================-->
+        <section class="blog_main_area p_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="single_blog_inner">
+                            <div class="s_blog_main">
+                                <div class="blog_img">
+                                {% for objects in head %}
+                                    <img class="img-fluid" src="{{objects.Picture.url}}" alt="">
+                                    <div class="blog_date">
+                                        <h4>{{objects.Day}}</h4>
+                                        <h5>{{objects.Month}}/{{objects.Year}}</h5>
+                                    </div>
+                                </div>
+                                {%endfor %}
+                                <div class="blog_text">
+                                {%for objects in careerone%}
+                                    <a href="#"><h4><b>Freelance with us</b></h4></a>
+                                    <a href="#"><h4>{{objecsts.Title}}</h4></a>
+
+                                    </div>
+                                    {{objects.Content}}
+                                     {%endfor %}
+                                </div>
+                                <div class="blog_text">
+                                {%for objects in careertwo%}
+                                    <a href="#"><h4><b>Freelance with us</b></h4></a>
+                                    <a href="#"><h4>{{objecsts.Title}}</h4></a>
+
+                                    </div>
+                                    {{objects.Content}}
+                                     {%endfor %}
+                                </div>
+                                <div class="blog_text">
+                                {%for objects in careerthree%}
+                                    <a href="#"><h4><b>Freelance with us</b></h4></a>
+                                    <a href="#"><h4>{{objecsts.Title}}</h4></a>
+
+                                    </div>
+                                    {{objects.Content}}
+                                     {%endfor %}
+                                </div>
+                                <div class="blog_text">
+                                {%for objects in careerfour%}
+                                    <a href="#"><h4><b>Freelance with us</b></h4></a>
+                                    <a href="#"><h4>{{objecsts.Title}}</h4></a>
+
+                                    </div>
+                                    {{objects.Content}}
+                                     {%endfor %}
+                                </div>
+                                <div class="blog_text">
+                                {%for objects in careefive%}
+                                    <a href="#"><h4><b>Freelance with us</b></h4></a>
+                                    <a href="#"><h4>{{objecsts.Title}}</h4></a>
+
+                                    </div>
+                                    {{objects.Content}}
+                                     {%endfor %}
+                                </div>
+                            </div>
+                            <div class="s_blog_social">
+                                <h3>Share</h3>
+                                    {%  for objects in social %}
+                        <ul>
+                            <li><a href="{{objects.Instagram}}"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{objects.Facebook}}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{objects.Twitter}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{objects.Whatsup}}"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="{{objects.Telegram}}"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="{{objects.LinkedIn}}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{objects.Youtube}}"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                        {% endfor %}
+                            </div>
+                        <div/>
+                    <div/>
+                <div/>
+            <div/>
+            {%include "footer.html"%}   
+        <section/>            
+    </body>
+    {%include "javascript.html"%}           
+</html>

@@ -1,0 +1,224 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       {% include "head.html" %}
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        {%include "header.html"%}
+        <!--================End Header Menu Area =================-->
+        
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_text">
+                    <h2>About Us</h2>
+                    <p>Get to know us</p>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Challange Area =================-->
+        <section class="challange_area p_100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="challange_text_inner">
+                            <div class="l_title">
+                            {% for objects in others %}
+                                <img src="{{objects.Icon_Title.url}}" alt="">
+                            {% endfor %}
+                        {% for objects in about %}
+                                <h6>{{objects.Title_Small}}</h6>
+                                <h2>{{objects.Title_Big}}</h2>
+                            </div>
+                            <p>{{objects.Content}}</p>
+                            <div class="c_video">
+                                <a class="popup-youtube" href="{{objects.Youtube_Link}}"><img src="{{objects.Button_Icon.url}}" alt="">{{objects.Button}} </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 challange_img">
+                        <div class="challange_img_inner">
+                            <img class="img-fluid" src="{{objects.Picture.url}}" alt="">
+                        </div>
+                        {%endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Challange Area =================-->
+        
+        <!--================Testimonials Slider Area =================-->
+        <section class="testimonials_area">
+            <div class="container">
+                <div class="testimonials_slider owl-carousel">
+                    <div class="item">
+                    {% for objects in shoutoutone%}
+                        <div class="testi_item">
+                            <h3>“{{oobjects.Title}}”</h3>
+                            <p>{{objects.Content}}</p>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="{{objects.Picture.url}}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4>{{objects.Name}}</h4>
+                                    <h5>{{objects.Job_Title}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor %}
+                    <div class="item">
+                        <div class="testi_item">
+                    {% for objects in shoutouttwo%}
+
+                            <h3>“{{oobjects.Title}}”</h3>
+                            <p>{{objects.Content}}</p>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="{{objects.Picture.url}}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4>{{objects.Name}}</h4>
+                                    <h5>{{objects.Job_Title}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor %}
+                    <div class="item">
+                        <div class="testi_item">
+                    {% for objects in shoutoutthree%}
+
+                            <h3>“{{oobjects.Title}}”</h3>
+                            <p>{{objects.Content}}</p>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="{{objects.Picture.url}}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4>{{objects.Name}}</h4>
+                                    <h5>{{objects.Job_Title}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                    {%endfor %}
+                        <div class="testi_item">
+                    {% for objects in shoutoutfour%}
+
+                            <h3>“{{oobjects.Title}}”</h3>
+                            <p>{{objects.Content}}</p>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="{{objects.Picture.url}}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4>{{objects.Name}}</h4>
+                                    <h5>{{objects.Job_Title}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor %}
+                </div>
+            </div>
+        </section>
+        <!--================End Testimonials Slider Area =================-->
+        
+        <!--================We Are Company Area =================-->
+        <section class="we_company_area p_100">
+            <div class="container">
+                <div class="row company_inner">
+                    <div class="col-lg-6">
+                        <div class="left_company_text">
+                            <div class="l_title">
+                            {%for objects in features%}
+                                <img src="{{objects.Icon.Url}}" alt="">
+                                <h6>{{objects.Title_Small}}</h6>
+                                <h2>{{objects.Title_Big}}</h2>
+                            </div>
+                            <p>{{objects.Content}} </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="company_skill">
+                            <p>{{object.Skills}}</p>
+                            {%endfor %}
+                            <div class="our_skill_inner">
+                                <div class="single_skill">
+                                    <h3>Development</h3>
+                                    <div class="progress" data-value="70">
+                                        <div class="progress-bar">
+                                            <div class="progress_parcent"><span class="counter">70</span>%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single_skill">
+                                    <h3>Design</h3>
+                                    <div class="progress" data-value="90">
+                                        <div class="progress-bar">
+                                            <div class="progress_parcent"><span class="counter">90</span>%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single_skill">
+                                    <h3>SEO</h3>
+                                    <div class="progress" data-value="85">
+                                        <div class="progress-bar">
+                                            <div class="progress_parcent"><span class="counter">85</span>%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single_skill">
+                                    <h3>Development</h3>
+                                    <div class="progress" data-value="90">
+                                        <div class="progress-bar">
+                                            <div class="progress_parcent"><span class="counter">90</span>%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single_skill">
+                                    <h3>Management</h3>
+                                    <div class="progress" data-value="75">
+                                        <div class="progress-bar">
+                                            <div class="progress_parcent"><span class="counter">75</span>%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End We Are Company Area =================-->
+        
+        <!--================End We Are Company Area =================-->
+        <section class="talk_area">
+            <div class="container">
+                <div class="talk_text">
+                {%for objects in others%}
+                    <h4>Are you ready to talk?</h4>
+                    <a href="mailto:{{objects.Email}}">{{objects.Email}}</a>
+                {%endfor %}
+                </div>
+            </div>
+        </section>
+        <!--================End We Are Company Area =================-->
+        
+        <!--================Footer Area =================-->
+        {% include "footer.html"%}
+        <!--================End Footer Area =================-->
+        
+        {% include "javascript.html"%}
+        <script src="js/circle-active.js"></script>
+        
+     </body>
+</html>

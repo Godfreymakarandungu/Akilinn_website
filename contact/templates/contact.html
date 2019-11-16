@@ -1,0 +1,140 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {%include "head.html"%}
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        {% include "header.html"%}
+        <!--================End Header Menu Area =================-->
+        
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_text">
+                    <h2>Contact</h2>
+                    <p>Get in touch</p>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Get in Touch Area =================-->
+        <section class="get_in_touch_area p_100">
+            <div class="container">
+                <div class="row get_touch_inner">
+                    <div class="col-lg-6">
+                        <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+                            </div>
+                            <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" value="submit" class="btn submit_btn form-control">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="touch_details">
+                            <div class="l_title">
+                            {% for objects in others %}
+                                <img src="{{objects.Icon_Title.url}}" alt="">
+                            {% endfor %}
+                            {% for objects in contact %}
+                                <h6>Say hello</h6>
+                                <h2>{{objects.Title}}</h2>
+                            </div>
+                            <p>{{objects.Content}}</p>
+                            {% endfor %}
+                            {%for objects in others%}
+                            <a href="tel:{{objects.Phone_Number}}"><h5>Call us now</h5></a>
+                            <a href="tel:{{objects.Phone_Number}}"><h4>{{objects.Phone_Number}}</h4></a>
+                            {%endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Get in Touch Area =================-->
+        
+        <!--================Map Area =================-->
+        {%include "maparea.html"%}
+        
+        </section>
+        <!--================End Map Area =================-->
+        
+        <!--================Footer Area =================-->
+      {% include "footer.html"}
+        <!--================End Footer Area =================-->
+        
+        
+        <!--================Contact Success and Error message Area =================-->
+        <div id="success" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Thank you</h2>
+                        <p>Your message is successfully sent...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals error -->
+
+        <div id="error" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Sorry !</h2>
+                        <p> Something went wrong </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================End Contact Success and Error message Area =================-->
+        
+     <script>
+     {% include "javascript.html"%}
+        <script src="{%static 'vendors/circle-bar/circle-progress.min.js'%}"></script>
+        <script src="{%static 'vendors/circle-bar/plugins.js'%}"></script>
+        <script src="{%static 'vendors/isotope/imagesloaded.pkgd.min.js'%}"></script>
+        <script src="{%static 'vendors/isotope/isotope.pkgd.min.js'%}"></script>
+        
+        <!--gmaps Js-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="{%static 'js/gmaps.min.js'%}"></script>
+        
+        <!-- contact js -->
+        <script src="{%static 'js/jquery.form.js'%}"></script>
+        <script src="{%static 'js/jquery.validate.min.js'%}"></script>
+        <script src="{%static 'js/contact.js'%}"></script>
+        
+        <script src="{%static 'js/circle-active.js'%}"></script>
+        </script>
+    </body>
+</html>

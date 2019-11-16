@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% include "head.html"%}
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+      {% include "header.html"%}>
+        <!--================End Header Menu Area =================-->
+        
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_text">
+                    <h2>Services</h2>
+                    <p>See what we do best</p>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================End Banner Area =================-->
+        <section class="service_feature">
+            <div class="container">
+                <div class="row feature_inner">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="feature_item">
+                        {%for objects in serviceone%}
+                            <div class="f_icon">
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p>{{objects.Content}} </p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="feature_item">
+                            <div class="f_icon">
+                        {%for objects in servicetwo%}
+
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p>{{objects.Content}} </p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                    <div class="col-lg-4 col-sm-6">
+                        {%for objects in servicethree%}
+
+                        <div class="feature_item">
+                            <div class="f_icon">
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p> {{objects.Content}} </p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                    <div class="col-lg-4 col-sm-6">
+                        {%for objects in servicefour%}
+                        <div class="feature_item">
+                            <div class="f_icon">
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p>{{objects.Content}}</p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                    <div class="col-lg-4 col-sm-6">
+                        {%for objects in servicefive%}
+                        <div class="feature_item">
+                            <div class="f_icon">
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p>{{objects.Content}} </p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                    <div class="col-lg-4 col-sm-6">
+                        {%for objects in servicesix%}
+
+                        <div class="feature_item">
+                            <div class="f_icon">
+                                <img src="{{objects.Favicon.url}}" alt="">
+                            </div>
+                            <h4>{{objects.Title}}</h4>
+                            <p>{{objects.Content}}</p>
+                            <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                        {%endfor %}
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Circle Chart Area =================-->
+       <section class="circle_chart_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="circle_progress circular style-polygon" data-percentage="100" data-thickness="3" data-reverse="true" data-empty-fill="transparent" data-start-color="#987dff" data-end-color="#7acaff">
+                            <div class="circle_progress_inner">
+                                <strong></strong>
+                                <span class="percentage"></span>
+                                <h4>Hard work</h4>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="circle_progress circular style-polygon" data-percentage="90" data-thickness="3" data-reverse="true" data-empty-fill="transparent" data-start-color="#987dff" data-end-color="#7acaff">
+                            <div class="circle_progress_inner">
+                                <strong></strong>
+                                <span class="percentage"></span>
+                                <h4>Creativity</h4>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="circle_progress circular style-polygon" data-percentage="95" data-thickness="3" data-reverse="true" data-empty-fill="transparent" data-start-color="#987dff" data-end-color="#7acaff">
+                            <div class="circle_progress_inner">
+                                <strong></strong>
+                                <span class="percentage"></span>
+                                <h4>Commitment</h4>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="circle_progress circular style-polygon" data-percentage="25" data-thickness="3" data-reverse="true" data-empty-fill="transparent" data-start-color="#987dff" data-end-color="#7acaff">
+                            <div class="circle_progress_inner">
+                                <strong></strong>
+                                <span class="percentage"></span>
+                                <h4>Good luck</h4>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End C
+        <!--================End Circle Chart Area =================-->
+        
+        <!--================Service Solution Area =================-->
+        <section class="service_solution_area p_100">
+            <div class="container">
+                <div class="row s_solution_inner">
+                    <div class="col-lg-6">
+                        <div class="s_solution_item">
+                            <div class="l_title">
+                            {%for objects in others %}
+                                <img src="{{Objects.Icon_Title.url}}" alt="">
+                            {% endfor %}
+                            {%for objects in features %}
+
+                                <h6>{{objects.Title_Small}}</h6>
+                                <h2>{{objects.Title_Big}}</h2>
+                            </div>
+                            <p>{{objects.Content}}</p>
+                            {%endfor %}
+                            <div id="accordion" role="tablist" class="solution_collaps">
+                                <div class="card">
+                                {%for objects in splashone%}
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            {{objects.Title}}
+                                            <i class="minus">-</i>
+                                            <i class="plus">+</i>
+                                            </a>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{objects.Content}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {%endfor %}
+                                <div class="card">
+                                {%for objects in splashtwo%}
+
+                                    <div class="card-header" role="tab" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            {{objects.Title}}                                            
+                                            <i class="minus">-</i>
+                                            <i class="plus">+</i>
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{objects.Content}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {%endfor %}
+                                <div class="card">
+                                {%for objects in splashthree %}
+
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            {{objects.Title}}                                            
+                                            <i class="minus">-</i>
+                                            <i class="plus">+</i>
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{objects.Content}} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {%endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Service Solution Area =================-->
+        
+        <!--================Footer Area =================-->
+      
+                 {% include "footer.html"%}
+        <!--================End Footer Area =================-->
+        
+        {% include "javascript.html"%}
+        {% load staticfiles %}
+    
+        <script src="{% static 'vendors/circle-bar/circle-progress.min.js'%}"></script>
+        <script src="{% static 'vendors/circle-bar/plugins.js'%}"></script>
+        
+        <script src="{% static 'js/circle-active.js'%}"></script>
+
+    </body>
+</html>

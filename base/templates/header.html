@@ -1,0 +1,27 @@
+        <!--================Header Menu Area =================-->
+        <header class="main_menu_area">
+        {% for objects in others%}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img src="{{objects.Logo.url}}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    {% endfor %}
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                   {% for objects in links%}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav_item"><a class="nav-link" href="{{objects.Home}}">Home</a></li>
+                        <li class="nav_item""><a class="nav-link" href="{{objects.About}}">About Us</a></li>
+                        <li class="nav_item""><a class="nav-link" href="{{objects.Services}}">Services</a></li>
+                        <li class="nav_item""><a class="nav-link" href="{{objects.Blog}}">Blog</a></li>
+                        <li class="nav_item""><a class="nav-link" href="{{objects.Careers}}">Careers</a></li>
+                        <li class="nav_item""><a class="nav-link" href="{{objects.Contact}}">Contact</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--================End Header Menu Area =================-->
+        

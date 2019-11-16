@@ -1,0 +1,79 @@
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!--================Footer Area =================-->
+        <footer class="footr_area">
+            <div class="footer_widget_area">
+                <div class="container">
+                    <div class="row footer_widget_inner">
+                        <div class="col-lg-4 col-sm-6">
+                            <aside class="f_widget f_about_widget">
+                            {% for objects in others %}
+                                <img src="{{objects.Logo.url}}" alt="">
+                            {%endfor %}
+                                   {% for objects in footer%}
+                                <p>{{objects.Content}}</p>
+                            </aside>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <aside class="f_widget f_insta_widget">
+                                <div class="f_title">
+                                    <h3>Instagram</h3> 
+                                </div>
+                                <ul>
+                                    <li><a href="#"><img src="{{objects.Picture_One.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Two.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Three.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Four.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Five.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Six.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Seven.url}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{objects.Picture_Eight.url}}" alt=""></a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <aside class="f_widget f_subs_widget">
+                                <div class="f_title">
+                                    <h3>Subscribe to newsletter</h3>
+                                </div>
+                                <form methor="post" action="email_subscription">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <input type="text" name="email_subscription"class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-secondary submit_btn" type="submit">Subscribe</button>
+                                    {% endfor %}
+                                    </span>
+                                </form>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="container">
+                    <div class="float-sm-left">
+                        <h5>
+Copyright &copy;<script>document.write(new Date().getFullYear() );</script> All rights reserved |  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.akilinn.co.ke" target="_blank">Akilinn. 	&nbsp; <i class="fa fa-bolt"></i><a  style="color:green"> by bizz yetu<a/></a>
+</h5>
+                    </div>
+                    <div class="float-sm-right">
+                    {%  for objects in social %}
+                        <ul>
+                            <li><a href="{{objects.Instagram}}"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{objects.Facebook}}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{objects.Twitter}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{objects.Whatsup}}"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="{{objects.Telegram}}"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="{{objects.LinkedIn}}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{objects.Youtube}}"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <!--================End Footer Area =================-->
+        

@@ -1,0 +1,50 @@
+
+<script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=0c09dcf1352eb' async='true'></script>
+ {% load staticfiles%}
+ {% load compress %}
+ {% compress css %}
+ <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% for objects in others %}
+        <link rel="icon" href="{{objects.Logo_Icon.url}}" type="image/x-icon" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Akilinn</title>
+        {%endfor %}
+        <!-- Icon css link -->
+        <link href="{%static 'css/font-awesome.min.css'%}" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+        
+        <!-- Rev slider css -->
+        <link href="{%static 'vendors/revolution/css/settings.css'%}" rel="stylesheet">
+        <link href="{%static 'vendors/revolution/css/layers.css'%}" rel="stylesheet">
+        <link href="{%static 'vendors/revolution/css/navigation.css'%}" rel="stylesheet">
+        
+        <!-- Extra plugin css -->
+        <link href="{%static 'vendors/owl-carousel/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{%static 'vendors/magnify-popup/magnific-popup.css'%}" rel="stylesheet">
+        
+        <link href="{%static 'css/style.css'%}" rel="stylesheet">
+        <link href="{%static 'css/responsive.css'%}" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js'%}"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js'%}"></script>
+        <![endif]-->
+ {% endcompress %}
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5dca5324d96992700fc6fdca/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
