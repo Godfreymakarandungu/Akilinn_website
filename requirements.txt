@@ -74,7 +74,7 @@ django-two-factor-auth==1.9.1
 django-versatileimagefield==1.10
 django-webpack-loader==0.6.0
 django-xmlrpc==0.1.8
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 draftjs-exporter==2.1.7
 entrypoints==0.3
